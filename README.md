@@ -1,1 +1,1 @@
-# fullstackopen_exercises
+# Exercises from FullStackOpen course
