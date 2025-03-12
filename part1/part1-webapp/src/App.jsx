@@ -6,11 +6,17 @@ const Content = (props) => {
   return (
     <>
       {props.partsAndExersices.map((e) => (
-        <p>
-          {e.part} {e.exercises}
-        </p>
+        <Part part={e.part} exercises={e.exercises} />
       ))}
     </>
+  )
+}
+
+const Part = (props) => {
+  return (
+    <p>
+      {props.part} {props.exercises}
+    </p>
   )
 }
 
