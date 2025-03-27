@@ -13,10 +13,22 @@ function App() {
   ]
 
   const [selected, setSelected] = useState(0)
+  const [votes, setVotes] = useState([])
 
   return (
     <>
-      <div>{anecdotes[selected]}</div>
+      <h1>{anecdotes[selected]}</h1>
+      <h1>{votes[selected]}</h1>
+
+      <button
+        onClick={() => {
+          const copy = [...votes]
+          copy[selected] = (copy[selected] || 0) + 1
+          setVotes(copy)
+        }}
+      >
+        Vote
+      </button>
       <button
         onClick={() => {
           setSelected(Math.floor(Math.random() * anecdotes.length))
