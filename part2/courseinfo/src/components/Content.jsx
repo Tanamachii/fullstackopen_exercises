@@ -6,6 +6,12 @@ const Content = (props) => {
           {part.name} {part.exercises}
         </p>
       ))}
+      <p>
+        <strong>
+          Total of {props.parts.reduce((sum, part) => sum + part.exercises, 0)}{' '}
+          exercises
+        </strong>
+      </p>
     </>
   )
 }
